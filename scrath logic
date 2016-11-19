@@ -1,0 +1,40 @@
+for (ProcessMem p : runableQueue) {
+
+				// add a process runable queue
+				while (time >= pQueue.peek().arrival_time) {
+					pQueue.peek().timeEnter = time;
+					// Free Pages > 4, add job to runnable queue
+					if (freePages > 4)
+						runableQueue.add(pQueue.pop());
+
+					// Otherwise wait until process finishes
+
+				} // end while
+
+				// Runnable Queue Processing if > 4 pages free
+				if (NumberOfFreePages(memory) >= 4) {
+					int numPages = 0;
+					// while(numPages <= 3 && p.page.size() !=0){
+					p.page.peek().inMem = true;
+					// num of pages in the process
+					int numpages = pQueue.peek().page.size();
+
+					System.out.println("Free Pages List #: " + NumberOfFreePages(memory));
+					for (int i = 0; i < numpages; i++) {
+
+						// memory.add(p.page.pop());
+						numPages--;
+
+					}
+					// Runnable Queue Process Algorithm: FCFS, LRU, LFU, MFU,
+					// Random
+				} else {
+					for (int i = 0; i == freePages; i++) {
+
+					}
+				}
+
+				time++;
+			} // end for
+
+		} // end while
